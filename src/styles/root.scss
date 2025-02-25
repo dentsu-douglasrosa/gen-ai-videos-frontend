@@ -1,0 +1,16 @@
+@use './fonts';
+@use './colors';
+@use './spacing';
+@use './units';
+@use './breakpoints';
+@use './sizes';
+
+.root-container {
+  .project-title {
+    
+  }
+
+  .project-description {
+    color: colors.$neutrals-light;
+  }
+}

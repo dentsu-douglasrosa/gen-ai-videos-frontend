@@ -1,0 +1,19 @@
+@use './units';
+
+// small phone
+$breakpoint-xs: units.rem(320);
+
+// regular phone
+$breakpoint-sm: units.rem(576);
+
+// tablet
+$breakpoint-md: units.rem(768);
+
+// regular desktop
+$breakpoint-lg: units.rem(992);
+
+// large desktop
+$breakpoint-xl: units.rem(1200);
+
+// 4K desktop
+$breakpoint-xxl: units.rem(1400);

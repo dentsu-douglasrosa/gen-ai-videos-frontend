@@ -1,0 +1,50 @@
+@use './fonts';
+@use './colors';
+@use './spacing';
+@use './units';
+@use './breakpoints';
+@use './sizes';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @media (max-width: breakpoints.$breakpoint-md) {
+    background-position: center units.rem(-50);
+  }
+
+  background-position: center units.rem(-100);
+  background-image: url('../assets/bg.jpg'); /* Replace with your image path */
+  background-repeat: repeat; /* Repeats both horizontally and vertically */
+  background-size: cover; 
+  
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: fonts.$font-family;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  @media (max-width: breakpoints.$breakpoint-md) {
+    // margin-top: sizes.$header-height;
+    padding: units.rem(26);
+  }
+  
+  @media (min-width: breakpoints.$breakpoint-md) {
+    padding: units.rem(32);
+    // display: flex;
+    // flex-direction: row;
+  }
+
+  .main-content {
+    flex: 1;  
+  }
+}

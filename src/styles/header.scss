@@ -1,0 +1,53 @@
+@use './spacing';
+@use './units';
+@use './colors';
+@use './breakpoints';
+@use './sizes';
+
+
+.header-container {
+  // z-index: 10;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  height: sizes.$header-height;
+  display: flex;
+  padding-left: spacing.$horizontal-spacing;
+  padding-right: spacing.$horizontal-spacing;
+  color: colors.$primary-dark;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: units.rem(1) solid;
+  border-width: units.rem(1);
+  border-color: colors.$neutrals-light;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .logo-img {
+      width: auto;
+      height: units.rem(25);
+
+      @media (max-width: breakpoints.$breakpoint-md) {
+        width: auto;
+        height: units.rem(20);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav-bar {
+    .nav-list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

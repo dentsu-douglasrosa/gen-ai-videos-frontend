@@ -1,0 +1,70 @@
+@use './colors';
+@use './breakpoints';
+@use './fonts';
+@use './units';
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-radius: units.rem(50);
+  overflow: hidden;
+  
+  border: units.rem(1) solid colors.$neutrals-extra-light;
+  color: colors.$neutrals-extra-dark;
+  background-color: white;
+  padding-right: units.rem(8);
+  padding-bottom: units.rem(8);
+  padding-top: units.rem(8);
+
+  @media (max-width: breakpoints.$breakpoint-md) {
+    border: none;
+    background-color: transparent;
+  }
+
+  &:hover {
+    border: units.rem(1) solid colors.$accent1-medium;
+    color: colors.$neutrals-extra-dark;
+
+    @media (max-width: breakpoints.$breakpoint-md) {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .input {
+    flex: 1;
+    padding-left: units.rem(16);
+    border: none;
+    outline: none;
+    font-size: units.rem(16);
+    background-color: white;
+    width: units.rem(400);
+    font-family: fonts.$font-family;
+
+    @media (max-width: breakpoints.$breakpoint-md) {
+      display: none;
+    }
+
+    @media (max-width: breakpoints.$breakpoint-xl) {
+      width: units.rem(300);
+    }
+  }
+
+  .button {
+    background-color: colors.$primary-light;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: units.rem(50);
+    width: units.rem(40);
+    height: units.rem(40);
+
+    i {
+      color: colors.$neutrals-lightest;
+      font-size: units.rem(16);
+      
+    }
+  }
+}
